@@ -1,8 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+hr{
+    border:1px solid #eee;
+    position: relative;
+    top: 40px;
+}
 nav{
     background-color:  darkorange;
     padding: 10px;
     }
 nav a{
     padding-right: 10px;
+    color: white;
     }
+
+  .mainbody{
+      border:solid 1px #cccc;
+      margin: 10px 0px;
+      padding: 10px;
+  }  
+
+  .mainbody  p:first-child{
+      margin-top: 0px;
+      text-transform: capitalize;
+      color: darkorange;
+  }
+
+  button,input{
+      margin: 5px 5px 5px 0px;
+  }
+ 
+  input{
+      border: 1px solid #ccc;
+      color: #ccc;
+  }

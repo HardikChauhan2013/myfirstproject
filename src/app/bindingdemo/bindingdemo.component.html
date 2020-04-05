@@ -1,0 +1,37 @@
+<p>Bindingdemo works!</p>
+<ul>
+    <li>Property binding</li>
+    <li>Event binding</li>
+    <li>Model binding/two may binding</li>
+</ul>
+
+<hr/> 
+<h5>Send data from Componet/Class .ts -> .HTML (Property Binding)</h5>
+<div>{{message}}</div>
+<div [innerHTML]="age"></div>
+<input type="text" [value]="age" />
+
+<hr/>
+<h5>Send data from .HTML -> Componet/Class .ts (Event Binding)</h5>
+
+<button (click)="buttonClick('this is static value')">Sending Static message</button>
+
+<button (click)="buttonClickForDynamic($event)">Sending Dynamic data using $event</button>
+<br/>
+<button (click)="buttonClickForDynamic($event)">1</button>
+<button (click)="buttonClickForDynamic($event)">2</button>
+<button (click)="buttonClickForDynamic($event)">3</button>
+<button (click)="buttonClickForDynamic($event)">4</button>
+
+<br/>
+Send text value on after tab/on lost focus <input type="text" (change)="getDataFromTextBox($event)" /> {{textboxValue}}
+<br/>
+Send text value when type <input type="text" (keypress)="getDataFromTextBox($event)"  /> {{textboxValue}}
+<br/>
+Send value on selection <select (change)="getDataFromTextBox($event)" >
+    <option>--select--</option>
+    <option>JavaScript</option>
+    <option>Java</option>
+</select> {{textboxValue}}
+<hr/>
+<h5>Send data from Componet/Class .ts <--> .HTML and vice versa(Model Binding)</h5>

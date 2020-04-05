@@ -5,10 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 import {AboutmeComponent} from './aboutme/aboutme.component';
 //ng g c home
 import {HomeComponent} from './home/home.component';
+import {BindingdemoComponent} from './bindingdemo/bindingdemo.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
-  {path:"about",component:AboutmeComponent}
+  {path:"about",component:AboutmeComponent},
+  {path:"binding",component:BindingdemoComponent}
 ];
 
 @NgModule({
