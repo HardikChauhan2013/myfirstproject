@@ -1,1 +1,23 @@
 <p>aboutme works!</p>
+
+<h1>Componet/Class -> HTML (Property Binding)</h1>
+
+{{message}}
+ 
+<div [innerHTML]="age"></div>
+
+<input type="text" [value]="age" />
+
+
+<h1>HTML -> Componet/Class (Event Binding)</h1>
+<button (click)="buttonClick('this is static value')">Static</button>
+
+<button (click)="buttonClickForDynamic($event)">Dynamic</button>
+<br/>
+<button (click)="buttonClickForDynamic($event)">1</button>
+<button (click)="buttonClickForDynamic($event)">2</button>
+<button (click)="buttonClickForDynamic($event)">3</button>
+<button (click)="buttonClickForDynamic($event)">4</button>
+
+<input type="text" (change)="getDataFromTextBox($event)" />
+<input type="text" (keypress)="getDataFromTextBox($event)"  />
