@@ -6,11 +6,13 @@ import {AboutmeComponent} from './aboutme/aboutme.component';
 //ng g c home
 import {HomeComponent} from './home/home.component';
 import {BindingdemoComponent} from './bindingdemo/bindingdemo.component';
+import { TwobindingdemoComponent } from './twobindingdemo/twobindingdemo.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
   {path:"about",component:AboutmeComponent},
-  {path:"binding",component:BindingdemoComponent}
+  {path:"binding",component:BindingdemoComponent},
+  {path:"twobinding",component:TwobindingdemoComponent}
 ];
 
 @NgModule({

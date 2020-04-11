@@ -6,22 +6,27 @@ import { AppComponent } from './app.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { HomeComponent } from './home/home.component';
 import { BindingdemoComponent } from './bindingdemo/bindingdemo.component';
+import { TwobindingdemoComponent } from './twobindingdemo/twobindingdemo.component';
  
 //In java
 //import java.util.list;
 //In TS
 //import {list} from "./java/bli/java.util";
 
+import {FormsModule} from '@angular/forms'
+
 @NgModule({
   declarations: [
     AppComponent,
     AboutmeComponent,
     HomeComponent,
-    BindingdemoComponent
+    BindingdemoComponent,
+    TwobindingdemoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

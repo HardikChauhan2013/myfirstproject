@@ -1,0 +1,16 @@
+ng g c twobinddemo
+
+\src\app\app.module.ts
+    import {FormsModule} from '@angular/forms'
+    
+    ...
+     imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+    ],
+    ....
+
+
+<input [(ngModel)]="varName" />
+<input [(ngModel)]="varName" />
