@@ -5,15 +5,20 @@
 <div [innerHTML]=counter></div>
 
 <button (click)="passDataToServer(counter)"></button> -->
+<h2>Example 1</h2>
+<input type="text" [(ngModel)]="counter" />
+<input type="text" [(ngModel)]="counter" />
 
-<input type="text" [(ngModel)]="counter" />
-<input type="text" [(ngModel)]="counter" />
-<input type="range" [(ngModel)]="counter" />
+<h2>Example 2</h2>
+<input type="number" [(ngModel)]="counter" min="1" max="5" />
+<input type="range" [(ngModel)]="counter" min="1" max="5"  />
 
 <select [(ngModel)]="counter">
     <option>1</option>
     <option>2</option>
     <option>3</option>
-</select>
+    <option>4</option>
+    <option>5</option>
+  </select>
 
 {{counter}}
