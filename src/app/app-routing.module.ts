@@ -8,13 +8,15 @@ import {HomeComponent} from './home/home.component';
 import {BindingdemoComponent} from './bindingdemo/bindingdemo.component';
 import { TwobindingdemoComponent } from './twobindingdemo/twobindingdemo.component';
 import { CounterComponent } from './counter/counter.component';
+import { ConditionDemoComponent } from './condition-demo/condition-demo.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
   {path:"about",component:AboutmeComponent},
   {path:"binding",component:BindingdemoComponent},
   {path:"twobinding",component:TwobindingdemoComponent},
-  {path:"counter",component:CounterComponent}
+  {path:"counter",component:CounterComponent},
+  {path:"condition",component:ConditionDemoComponent},
 ];
 
 @NgModule({

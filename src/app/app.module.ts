@@ -14,7 +14,8 @@ import { TwobindingdemoComponent } from './twobindingdemo/twobindingdemo.compone
 //import {list} from "./java/bli/java.util";
 
 import {FormsModule} from '@angular/forms';
-import { CounterComponent } from './counter/counter.component'
+import { CounterComponent } from './counter/counter.component';
+import { ConditionDemoComponent } from './condition-demo/condition-demo.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CounterComponent } from './counter/counter.component'
     HomeComponent,
     BindingdemoComponent,
     TwobindingdemoComponent,
-    CounterComponent
+    CounterComponent,
+    ConditionDemoComponent
   ],
   imports: [
     BrowserModule,

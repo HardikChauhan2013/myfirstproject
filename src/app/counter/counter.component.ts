@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.css']
 })
-export class CounterComponent implements OnInit {
+export class CounterComponent {
 
   counterValue=1
 

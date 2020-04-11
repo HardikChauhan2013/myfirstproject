@@ -1,0 +1,67 @@
+<p>condition-demo works!</p>
+
+<h2>Example 1</h2>
+Show Message 
+<input type="checkbox" [(ngModel)]="isSave" />
+{{isSave}}
+<div>
+    <span *ngIf="isSave==true" > Save Successfully </span>
+    <span *ngIf="isSave==false"> Error in Save </span>
+</div>
+
+<h2>Example 2</h2>
+<input type="number" [(ngModel)]="counterValue" />
+{{counterValue}}
+
+<span *ngIf="counterValue==0">Zero</span>
+<span *ngIf="counterValue==1">One</span>
+<span *ngIf="counterValue==2">Two</span>
+<span *ngIf="counterValue > 2">Other number</span>
+
+<h2>Example 3(Switch)</h2>
+<input type="number" [(ngModel)]="counterValue" />
+{{counterValue}}
+
+
+<div [ngSwitch]="counterValue">
+    <ng-template [ngSwitchCase]="0">Zero</ng-template>
+    <ng-template [ngSwitchCase]="1">One</ng-template>
+    <ng-template [ngSwitchCase]="2">Two</ng-template>
+     <ng-template ngSwitchDefault>
+         Other Number
+     </ng-template>
+</div>
+
+<h2>Example 3 (For loop/foreach)
+</h2>
+
+<ul>
+    <li>
+        {{langList[0]}}
+    </li>
+    <li>
+        {{langList[1]}}
+    </li>
+    <li>
+        {{langList[2]}}
+    </li>
+</ul>
+
+
+<ul>
+    <li *ngFor="let item of langList">
+        {{item}}
+    </li>
+    
+</ul>
+
+<table border="1">
+    <tr>
+        <th>Programing lang</th>
+        <th>Support</th>
+    </tr>
+    <tr *ngFor="let item of langList">
+        <td>{{item}}</td>
+        <td><span *ngIf="item=='JavaScript'"> Client side</span></td>
+    </tr>
+</table>
