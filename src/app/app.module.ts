@@ -13,7 +13,8 @@ import { TwobindingdemoComponent } from './twobindingdemo/twobindingdemo.compone
 //In TS
 //import {list} from "./java/bli/java.util";
 
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { CounterComponent } from './counter/counter.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {FormsModule} from '@angular/forms'
     AboutmeComponent,
     HomeComponent,
     BindingdemoComponent,
-    TwobindingdemoComponent
+    TwobindingdemoComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,

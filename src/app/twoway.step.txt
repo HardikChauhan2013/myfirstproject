@@ -14,3 +14,5 @@ ng g c twobinddemo
 
 <input [(ngModel)]="varName" />
 <input [(ngModel)]="varName" />
+<select />
+<textarea>
