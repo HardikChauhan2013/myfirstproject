@@ -11,7 +11,10 @@ export class ConditionDemoComponent implements OnInit {
 
   counterValue=0;
 
-  langList =["Java","JavaScript","NodeJS","C#"]
+  langList =["Java","JavaScript","NodeJS","C#"];
+
+ 
+
 
 
   constructor() { }

@@ -9,6 +9,7 @@ import {BindingdemoComponent} from './bindingdemo/bindingdemo.component';
 import { TwobindingdemoComponent } from './twobindingdemo/twobindingdemo.component';
 import { CounterComponent } from './counter/counter.component';
 import { ConditionDemoComponent } from './condition-demo/condition-demo.component';
+import { FordemoComponent } from './fordemo/fordemo.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:"twobinding",component:TwobindingdemoComponent},
   {path:"counter",component:CounterComponent},
   {path:"condition",component:ConditionDemoComponent},
+  {path:"for",component:FordemoComponent}
 ];
 
 @NgModule({
