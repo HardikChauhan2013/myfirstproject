@@ -12,6 +12,8 @@ import { ConditionDemoComponent } from './condition-demo/condition-demo.componen
 import { FordemoComponent } from './fordemo/fordemo.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ProductComponent } from './product/product.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReactivedemoComponent } from './reactivedemo/reactivedemo.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -23,6 +25,7 @@ const routes: Routes = [
   {path:"for",component:FordemoComponent},
   {path:"form-template",component:TemplateFormComponent},
   {path:"productExample",component:ProductComponent},
+  {path:"form-reactive",component:ReactivedemoComponent},
 ];
 
 @NgModule({

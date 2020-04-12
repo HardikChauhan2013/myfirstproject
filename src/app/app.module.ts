@@ -13,12 +13,15 @@ import { TwobindingdemoComponent } from './twobindingdemo/twobindingdemo.compone
 //In TS
 //import {list} from "./java/bli/java.util";
 
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+//import {ReactiveFormsModule} from '@angular/forms'
+
 import { CounterComponent } from './counter/counter.component';
 import { ConditionDemoComponent } from './condition-demo/condition-demo.component';
 import { FordemoComponent } from './fordemo/fordemo.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
-import { ProductComponent } from './product/product.component'
+import { ProductComponent } from './product/product.component';
+import { ReactivedemoComponent } from './reactivedemo/reactivedemo.component'
 
 @NgModule({
   declarations: [
@@ -31,12 +34,14 @@ import { ProductComponent } from './product/product.component'
     ConditionDemoComponent,
     FordemoComponent,
     TemplateFormComponent,
-    ProductComponent
+    ProductComponent,
+    ReactivedemoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
