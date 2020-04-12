@@ -1,0 +1,35 @@
+<p>template-form works!</p>
+
+
+<form (submit)="sendData(frm)" #frm="ngForm">
+    <p>
+        User Name
+        <input type="text" name="username" ngModel="" required="required" #usernamecnt="ngModel"/>
+        <!-- {{usernamecnt.errors|json}} -->
+        <!-- {{usernamecnt.valid}} -->
+        <!-- {{usernamecnt.invalid}} -->
+            <span *ngIf="usernamecnt.invalid"> Please Enter User Name.
+        </span>
+    </p>
+
+    <p>
+        Password
+        <input type="password" name="password" ngModel="" required="required" #passcnt="ngModel"/>
+        <span *ngIf="passcnt.invalid">Please enter password</span>
+    </p>
+
+    <p>
+        Status
+        <input type="checkbox" name="isOnline" ngModel=""/>
+    </p>
+
+    <p>
+        City
+        <select name="City" ngModel="">
+            <option>AMD</option>
+            <option>Pune</option>
+        </select>
+
+    </p>
+    <input type="submit"/>
+</form>

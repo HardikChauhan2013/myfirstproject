@@ -1,0 +1,29 @@
+<p>product works!</p>
+
+
+<form (submit)="saveData(frm)" #frm="ngForm">
+
+    <p>
+        Product Name
+        <input type="text" name="productName" ngModel="" required="required" pattern="[^0-9]*" #productNameCnt="ngModel"/>
+    </p>
+    <!-- {{productNameCnt.errors|json}} -->
+    <!-- <div *ngIf="productNameCnt.invalid">Please enter product Name</div> -->
+    <div *ngIf="productNameCnt.invalid">
+        <span *ngIf="productNameCnt.errors.required">Please enter product Name</span>
+        <span *ngIf="productNameCnt.errors.pattern">Only alpha(String) allow</span>
+    </div>
+
+    <p>
+        Price
+        <input type="number" name="price" ngModel="" required="required" #priceCnt="ngModel"/>
+    </p>
+    <div>
+        <span *ngIf="priceCnt.invalid">Please enter price</span>
+    </div>
+    <p>
+        <input type="submit" *ngIf="frm.valid"/>
+    </p>
+
+
+</form>
