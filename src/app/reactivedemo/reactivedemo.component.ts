@@ -2,6 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 import {NgForm,FormGroup,FormControl,Validators} from '@angular/forms'
 
+//Step 1: Add line src\app\app.module.ts
+//import { ReactiveFormsModule } from '@angular/forms';
+// imports: [
+//   // other imports ...
+//   ReactiveFormsModule
+// ],
+
 @Component({
   selector: 'app-reactivedemo',
   templateUrl: './reactivedemo.component.html',
