@@ -14,6 +14,7 @@ import { TemplateFormComponent } from './template-form/template-form.component';
 import { ProductComponent } from './product/product.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReactivedemoComponent } from './reactivedemo/reactivedemo.component';
+import { ProductlistComponent } from './productlist/productlist.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:"form-template",component:TemplateFormComponent},
   {path:"productExample",component:ProductComponent},
   {path:"form-reactive",component:ReactivedemoComponent},
+  {path:"productlisthttp",component:ProductlistComponent},
 ];
 
 @NgModule({
