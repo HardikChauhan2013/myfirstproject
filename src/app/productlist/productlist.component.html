@@ -1,8 +1,8 @@
 <p>productlist works!</p>
 
-{{productlist}}
+<!-- {{productlist}}
 
-{{productlist|json}}
+{{productlist|json}} -->
 
 <table>
     <tr>
@@ -14,5 +14,15 @@
         <td>{{item.id}}</td>
         <td>{{item.productname}}</td>
         <td>{{item.price}}</td>
+        <td>
+            <button (click)="getDataFromDBById(item.id)">Edit</button>
+            <button (click)="deleteDataFromDB(item.id)">Delete</button>
+        </td>
     </tr>
 </table>
+
+<form (submit)="saveData(frm)" #frm="ngForm">
+    <input type="text" name="productname" ngModel />
+    <input type="text" name="price" ngModel />
+    <input type="submit" value="Create New Product" />
+</form>
