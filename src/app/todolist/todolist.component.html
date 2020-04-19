@@ -31,7 +31,7 @@
                 Delete
             </th>
         </tr>
-        <tr *ngFor="let item of tasklist">
+        <tr *ngFor="let item of inMemoryService.tasklist">
             <td></td>
             <td>{{item.taskName}}</td>
             <td>{{item.complate==true?'Done':'In Progress'}}</td>
@@ -46,7 +46,7 @@
 
             </td>
             <td>
-                <button (click)="deleteTask(item)">Delete</button>
+                <button (click)="inMemoryService.deleteTask(item)">Delete</button>
             </td>
         </tr>
 
