@@ -1,0 +1,54 @@
+<div class="container">
+    <p>todolist works!</p>
+
+
+    <form class="form" [formGroup]="frm" (submit)="saveData()">
+        <div class="form-group">
+            <label>Task Name</label>
+            <input type="text" class="form-control" formControlName="taskName" />
+        </div>
+        <div class="form-group">
+            <label>Status</label>
+            <input type="checkbox" formControlName="complate" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add" class="form-control btn btn-success" />
+        </div>
+    </form>
+
+    <table class="table">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Task Name
+            </th>
+            <th>
+                Edit
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+        <tr *ngFor="let item of tasklist">
+            <td></td>
+            <td>{{item.taskName}}</td>
+            <td>{{item.complate==true?'Done':'In Progress'}}</td>
+            <td>
+                <span *ngIf="item.complate==true">Done</span>
+                <span *ngIf="item.complate!=true">In Progress</span>
+            </td>
+            <td>
+                <button *ngIf="item.complate==false" (click)="fillForm(item)">Edit</button>
+                <button [hidden]="item.complate==true" (click)="fillForm(item)">Edit</button>
+                <button [disabled]="item.complate==true" (click)="fillForm(item)">Edit</button>
+
+            </td>
+            <td>
+                <button (click)="deleteTask(item)">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+</div>
