@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms'
 import { TodolistInMemoryService } from '../todolist-in-memory.service'
+import { TodolistInDBService } from '../todolist-in-db.service'
 
 @Component({
   selector: 'app-todolist',
@@ -14,7 +15,8 @@ export class TodolistComponent implements OnInit {
     complate: new FormControl(),
   })
 
-  constructor(@Inject(TodolistInMemoryService) public inMemoryService: TodolistInMemoryService) { }
+  //constructor(@Inject(TodolistInMemoryService) public inMemoryService: TodolistInMemoryService) { }
+  constructor(@Inject(TodolistInDBService) public inDBService: TodolistInDBService) { }
 
   ngOnInit(): void {
   }
@@ -22,13 +24,18 @@ export class TodolistComponent implements OnInit {
   saveData() {
     if (this.frm.valid === true) {
       //store in DB
-      if (this.inMemoryService.findTask(this.frm.value) == true) {
-        this.inMemoryService.updateTask(this.frm.value)
-      } else {
-        this.inMemoryService.addTask(this.frm.value);
-      }
-      this.frm.reset();
-      alert('Task Saved')
+      this.inDBService.findTask(this.frm.value).then(response => {
+        //if (this.inMemoryService.findTask(this.frm.value) == true) {
+        if (response) {
+          this.inDBService.updateTask(this.frm.value)
+        } else {
+          this.inDBService.addTask(this.frm.value);
+        }
+        this.frm.reset();
+        alert('Task Saved')
+
+      })
+
     }
     else {
       alert('Please fill form');
