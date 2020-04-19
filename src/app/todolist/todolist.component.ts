@@ -11,6 +11,7 @@ import { TodolistInDBService } from '../todolist-in-db.service'
 export class TodolistComponent implements OnInit {
 
   frm = new FormGroup({
+    id: new FormControl(0),
     taskName: new FormControl('', Validators.required),
     complate: new FormControl(),
   })
@@ -19,6 +20,7 @@ export class TodolistComponent implements OnInit {
   constructor(@Inject(TodolistInDBService) public inDBService: TodolistInDBService) { }
 
   ngOnInit(): void {
+    this.inDBService.getAll();
   }
 
   saveData() {
@@ -26,6 +28,7 @@ export class TodolistComponent implements OnInit {
       //store in DB
       this.inDBService.findTask(this.frm.value).then(response => {
         //if (this.inMemoryService.findTask(this.frm.value) == true) {
+        console.log(response)
         if (response) {
           this.inDBService.updateTask(this.frm.value)
         } else {
