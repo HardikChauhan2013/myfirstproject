@@ -22,7 +22,7 @@ export class TodolistInDBService {
   findTask(selecteItem) {
     const id = selecteItem.id;
     //http://localhost:3000/tasklist/2
-    return this.proxy.get(this.REST_URL + id).toPromise();
+    return this.proxy.get(this.REST_URL + id).toPromise().then(() => true).catch(() => false);
   }
 
   //DELETE RECORD
@@ -36,14 +36,14 @@ export class TodolistInDBService {
 
   //CREATE NEW RECORD
   addTask(selectedItem) {
-    return this.proxy.post(this.REST_URL, selectedItem).toPromise();
+    return this.proxy.post(this.REST_URL, selectedItem).toPromise().then(() => this.getAll());
   }
 
   //TO MODIFIY RECORD
   updateTask(selecteItem) {
     const id = selecteItem.id;
     //http://localhost:3000/tasklist/2
-    return this.proxy.put(this.REST_URL + id, selecteItem).toPromise();
+    return this.proxy.put(this.REST_URL + id, selecteItem).toPromise().then(() => this.getAll());
   }
 
 }

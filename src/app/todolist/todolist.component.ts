@@ -11,7 +11,7 @@ import { TodolistInDBService } from '../todolist-in-db.service'
 export class TodolistComponent implements OnInit {
 
   frm = new FormGroup({
-    id: new FormControl(0),
+    id: new FormControl(),
     taskName: new FormControl('', Validators.required),
     complate: new FormControl(),
   })
