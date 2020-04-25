@@ -3,14 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CounterPageComponent } from './counter-page/counter-page.component';
+
+import { FormsModule } from '@angular/forms';
+import { CounterInputComponent } from './commStyle1/counter-input/counter-input.component';
+import { CounterButtonComponent } from './commStyle1/counter-button/counter-button.component';
+import { CounterSliderComponent } from './commStyle1/counter-slider/counter-slider.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CounterPageComponent,
+    CounterInputComponent,
+    CounterButtonComponent,
+    CounterSliderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
