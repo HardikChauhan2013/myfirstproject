@@ -1,6 +1,5 @@
 <div class="container">
-    <p>todolist works!</p>
-
+    <p>{{"todolist works!"|titlecase}}</p>
 
     <form class="form" [formGroup]="frm" (submit)="saveData()">
         <input type="hidden" class="form-control" formControlName="id" />
@@ -19,13 +18,13 @@
 
     <table class="table">
         <tr>
-            <th (click)="sortData()">
+            <th (click)="inDBService.sortData('id')">
                 ID
             </th>
-            <th>
+            <th (click)="inDBService.sortData('taskName')">
                 Task Name
             </th>
-            <th>Status</th>
+            <th (click)="inDBService.sortData('complate')">Status</th>
             <th>Status</th>
             <th>
                 Edit
@@ -36,8 +35,9 @@
         </tr>
         <tr *ngFor="let item of inDBService.tasklist">
             <td>{{item.id}}</td>
-            <td>{{item.taskName}}</td>
+            <td>{{item.taskName|uppercase}}</td>
             <td>{{item.complate==true?'Done':'In Progress'}}</td>
+            <td>{{item|taskstatus}}</td>
             <td>
                 <span *ngIf="item.complate==true">Done</span>
                 <span *ngIf="item.complate!=true">In Progress</span>
@@ -54,10 +54,10 @@
         </tr>
 
     </table>
-    <button (click)="showPage(0)" >1</button>
-    <button (click)="showPage(1)">2</button>
-    <button (click)="showPage(2)">3</button>
-    <button (click)="showPage(3)">4</button>
+    <button (click)="inDBService.pageData(0)">1</button>
+    <button (click)="inDBService.pageData(1)">2</button>
+    <button (click)="inDBService.pageData(2)">3</button>
+    <button (click)="inDBService.pageData(3)">4</button>
 
     <br />
     <button>

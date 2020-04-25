@@ -49,22 +49,4 @@ export class TodolistComponent implements OnInit {
     this.frm.setValue(selecteItem);
   }
 
-  sortData() {
-    console.log('SortData Done')
-    this.inDBService.sortData('number');
-  }
-
-  showPage(pageIndex) {
-    console.log(pageIndex);
-    // page 0 : 0, 1
-    // page 1 : 2, 3
-    // page 2 : 4, 5
-    var startIndex = pageIndex * 2;
-    var endIndex = startIndex + 1;
-
-    console.log(pageIndex, startIndex, endIndex);
-    this.inDBService.pageData(startIndex, endIndex);
-
-  }
-
 }

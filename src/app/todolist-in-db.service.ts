@@ -12,28 +12,36 @@ export class TodolistInDBService {
 
   tasklist: any = []
 
-  pageData(startIndex, endIndex) {
-    this.tasklist = this.tasklist.filter((item, index) => startIndex >= index && index <= endIndex)
+  pageData(pageIndex) {
+
+    var startIndex = pageIndex * 2;
+    var endIndex = startIndex + 1;
+
+    return this.getAll()
+      .then(() => {
+        this.tasklist = this.tasklist.filter((item, index) => startIndex <= index && index <= endIndex)
+      })
   }
 
-  sortData(sortType) {
+  sortData(columnName) {
     console.log('before sorting: ', this.tasklist);
 
-    if (sortType == "string") {
-      this.tasklist = this.tasklist.sort(sortStringData);
-    }
-    else {
+    if (columnName == 'id') {
       this.tasklist = this.tasklist.sort(sortNumberData);
     }
+    else if (columnName == 'taskName' || columnName == 'complate') {
+      this.tasklist = this.tasklist.sort(sortStringData);
+    }
+
     function sortNumberData(a, b) {
-      return a.id - b.id;
+      return a[columnName] - b[columnName];
     }
 
     function sortStringData(a, b) {
-      if (a.value > b.value) {
+      if (a[columnName] > b[columnName]) {
         return 1;
       }
-      if (a.value < b.value) {
+      if (a[columnName] < b[columnName]) {
         return -1;
       }
       return 0;
