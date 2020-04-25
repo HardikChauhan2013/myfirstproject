@@ -8,9 +8,9 @@
             <label>Task Name</label>
             <input type="text" class="form-control" formControlName="taskName" />
         </div>
-        <div class="form-group">
-            <label>Status</label>
-            <input type="checkbox" formControlName="complate" />
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" formControlName="complate" />
+            <label class="form-check-label">Status</label>
         </div>
         <div class="form-group">
             <input type="submit" value="Add" class="form-control btn btn-success" />
@@ -19,12 +19,14 @@
 
     <table class="table">
         <tr>
-            <th>
+            <th (click)="sortData()">
                 ID
             </th>
             <th>
                 Task Name
             </th>
+            <th>Status</th>
+            <th>Status</th>
             <th>
                 Edit
             </th>
@@ -52,4 +54,14 @@
         </tr>
 
     </table>
+    <button (click)="showPage(0)" >1</button>
+    <button (click)="showPage(1)">2</button>
+    <button (click)="showPage(2)">3</button>
+    <button (click)="showPage(3)">4</button>
+
+    <br />
+    <button>
+        Prev</button>
+    <button>
+        Next</button>
 </div>

@@ -12,6 +12,36 @@ export class TodolistInDBService {
 
   tasklist: any = []
 
+  pageData(startIndex, endIndex) {
+    this.tasklist = this.tasklist.filter((item, index) => startIndex >= index && index <= endIndex)
+  }
+
+  sortData(sortType) {
+    console.log('before sorting: ', this.tasklist);
+
+    if (sortType == "string") {
+      this.tasklist = this.tasklist.sort(sortStringData);
+    }
+    else {
+      this.tasklist = this.tasklist.sort(sortNumberData);
+    }
+    function sortNumberData(a, b) {
+      return a.id - b.id;
+    }
+
+    function sortStringData(a, b) {
+      if (a.value > b.value) {
+        return 1;
+      }
+      if (a.value < b.value) {
+        return -1;
+      }
+      return 0;
+    };
+
+    console.log('after sorting: ', this.tasklist);
+  }
+
   getAll() {
     return this.proxy.get(this.REST_URL).toPromise().then(response => {
       this.tasklist = response;
