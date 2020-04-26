@@ -1,5 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 .group{
+    border:1px solid #00f;
+    padding: 10px;
+}
+
+.group-main{
+    margin: 5px;
     border:1px solid #f00;
     padding: 10px;
+}
+ 
+app-counter-input ,app-counter-button,app-counter-slider {
+    padding: 5px;
+    display: inline-block;
 }
