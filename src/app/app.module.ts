@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { CounterInputComponent } from './commStyle1/counter-input/counter-input.component';
 import { CounterButtonComponent } from './commStyle1/counter-button/counter-button.component';
 import { CounterSliderComponent } from './commStyle1/counter-slider/counter-slider.component';
+import { CounterParentButtonComponent } from './commStyle2/counter-parent-button/counter-parent-button.component';
+import { CounterChildInputComponent } from './commStyle2/counter-child-input/counter-child-input.component';
+import { MymenuComponent } from './mymenu/mymenu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { CounterSliderComponent } from './commStyle1/counter-slider/counter-slid
     CounterPageComponent,
     CounterInputComponent,
     CounterButtonComponent,
-    CounterSliderComponent
+    CounterSliderComponent,
+    CounterParentButtonComponent,
+    CounterChildInputComponent,
+    MymenuComponent
   ],
   imports: [
     BrowserModule,

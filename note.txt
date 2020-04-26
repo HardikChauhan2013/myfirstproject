@@ -1,0 +1,3 @@
+ng g c commStyle2/counter-parent-button
+
+ng g c commStyle2/counter-child-input

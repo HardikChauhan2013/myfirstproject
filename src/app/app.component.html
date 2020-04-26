@@ -1,6 +1,7 @@
-<router-outlet></router-outlet>
+<app-mymenu [menuitem]="menu"></app-mymenu>
 
-<div class="group-main">
+<router-outlet></router-outlet>
+<div class=" group-main">
     <h1>Using Service (sibling component)</h1>
     <app-counter-input></app-counter-input>
     <app-counter-input></app-counter-input>
@@ -10,4 +11,6 @@
 </div>
 <div class="group-main">
     <h1>Using Input and Output (parent child)</h1>
+    <app-counter-parent-button></app-counter-parent-button>
 </div>
+<app-mymenu [menuitem]="menu"></app-mymenu>

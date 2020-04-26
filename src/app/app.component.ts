@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myfirstproject';
+
+  menu = ['Home', 'About Us', 'Contact', 'Login']
 }
