@@ -1,0 +1,9 @@
+<p>counter-parent-input works!</p>
+
+<div class="group">
+
+    <input type="text" [(ngModel)]="receivedValue" />
+
+
+    <app-counter-child-button (counterValueChanged)="counterValueHandler($event)"></app-counter-child-button>
+</div>

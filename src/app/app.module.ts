@@ -12,6 +12,8 @@ import { CounterSliderComponent } from './commStyle1/counter-slider/counter-slid
 import { CounterParentButtonComponent } from './commStyle2/counter-parent-button/counter-parent-button.component';
 import { CounterChildInputComponent } from './commStyle2/counter-child-input/counter-child-input.component';
 import { MymenuComponent } from './mymenu/mymenu.component';
+import { CounterParentInputComponent } from './commStyle3/counter-parent-input/counter-parent-input.component';
+import { CounterChildButtonComponent } from './commStyle3/counter-child-button/counter-child-button.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MymenuComponent } from './mymenu/mymenu.component';
     CounterSliderComponent,
     CounterParentButtonComponent,
     CounterChildInputComponent,
-    MymenuComponent
+    MymenuComponent,
+    CounterParentInputComponent,
+    CounterChildButtonComponent
   ],
   imports: [
     BrowserModule,
