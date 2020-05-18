@@ -1,0 +1,67 @@
+<div class="container">
+    <p>{{"todolist works!"|titlecase}}</p>
+
+    <form class="form" [formGroup]="frm" (submit)="saveData()">
+        <input type="hidden" class="form-control" formControlName="id" />
+        <div class="form-group">
+            <label>Task Name</label>
+            <input type="text" class="form-control" formControlName="taskName" />
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" formControlName="complate" />
+            <label class="form-check-label">Status</label>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add" class="form-control btn btn-success" />
+        </div>
+    </form>
+
+    <table class="table">
+        <tr>
+            <th (click)="inDBService.sortData('id')">
+                ID
+            </th>
+            <th (click)="inDBService.sortData('taskName')">
+                Task Name
+            </th>
+            <th (click)="inDBService.sortData('complate')">Status</th>
+            <th>Status</th>
+            <th>
+                Edit
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+        <tr *ngFor="let item of inDBService.tasklist">
+            <td>{{item.id}}</td>
+            <td>{{item.taskName|uppercase}}</td>
+            <td>{{item.complate==true?'Done':'In Progress'}}</td>
+            <td>{{item|taskstatus}}</td>
+            <td>
+                <span *ngIf="item.complate==true">Done</span>
+                <span *ngIf="item.complate!=true">In Progress</span>
+            </td>
+            <td>
+                <button *ngIf="item.complate==false" (click)="fillForm(item)">Edit</button>
+                <button [hidden]="item.complate==true" (click)="fillForm(item)">Edit</button>
+                <button [disabled]="item.complate==true" (click)="fillForm(item)">Edit</button>
+
+            </td>
+            <td>
+                <button (click)="inDBService.deleteTask(item)">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+    <button (click)="inDBService.pageData(0)">1</button>
+    <button (click)="inDBService.pageData(1)">2</button>
+    <button (click)="inDBService.pageData(2)">3</button>
+    <button (click)="inDBService.pageData(3)">4</button>
+
+    <br />
+    <button>
+        Prev</button>
+    <button>
+        Next</button>
+</div>
