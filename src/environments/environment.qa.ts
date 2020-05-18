@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  validateuserUrl:'http://liveproductio/'
+  validateuserUrl:'http://QA/'
 };

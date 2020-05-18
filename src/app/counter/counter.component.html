@@ -1,0 +1,21 @@
+<p>counter works!</p>
+
+Using Property and Event Biding 
+<input type="text" (change)="update($event.target.value)" [value]="counterValue" />
+<br/>
+Using ngModel
+<input type="text" [(ngModel)]="counterValue" />
+<br/>
+
+<button (click)="increment()" >Increment</button>
+ 
+<button (click)="decremnet()" >Decrement</button>
+
+<h2>
+    Addition
+    <input type="text" />
+    <input type="text" />
+    <div>Result is </div>
+    <button>Add</button>
+    <button>Multiple</button>
+</h2>

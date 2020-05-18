@@ -1,0 +1,20 @@
+<p>reactivedemo works!</p>
+
+
+<!-- <form #frm="ngFrom"> -->
+<form [formGroup]="frm" (submit)="saveData()">
+    <p>
+        User Name
+        <input type="text" formControlName="username"/>
+    </p>
+    <span *ngIf="frm.controls['username'].hasError('required')">Please enter username</span>
+    <span *ngIf="frm.controls['username'].hasError('minlength')">Please enter username at least 5 char</span>
+    <p>
+        Password
+        <input type="password" formControlName="password"/>
+    </p>
+    <p>
+        <input type="submit" [disabled]="frm.invalid"/>
+    </p>
+
+</form>

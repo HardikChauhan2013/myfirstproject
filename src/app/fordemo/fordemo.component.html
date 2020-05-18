@@ -1,0 +1,25 @@
+<p>fordemo works!</p>
+
+
+<h2>Example 1 (For loop/foreach) Json Object</h2>
+<table>
+    <tr>
+        <th>Programing lang</th>
+        <th>Support</th>
+    </tr>
+    <tr *ngFor="let item of langDetailList">
+        <td>{{item.langName}}</td>
+        <td>{{item.support}}</td>
+    </tr>
+</table>
+
+<h2>Example 2 (For loop/foreach) nexted Json Object</h2>
+<ul *ngFor="let category of menu" >
+    <li>{{category.name}}
+        <ul *ngFor="let product of category.list">
+            <li>
+                {{product.name}} - {{product.price}}
+            </li>
+        </ul>
+    </li>
+</ul>

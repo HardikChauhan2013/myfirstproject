@@ -1,0 +1,58 @@
+e2e : QA team for develop integration code using nodejs
+	- Selenium + node
+	- Karma + JS (Report)
+	- Protector + JS (specific desing for angular)
+
+----------------------------------------------------------
+Node_module : same as java Lib (jar) - Maven
+	js lib/package - npm i
+
+----------------------------------------------------------
+.editorconfig
+	just for vs code edit setting 
+	like change font size...
+----------------------------------------------------------
+.gitignore
+	related to Git source control
+----------------------------------------------------------
+angular.json
+	have all project setting 
+	like how to run project
+	how test project
+	how to build/prodcution
+----------------------------------------------------------
+browserslist
+	have detail of supported browser
+----------------------------------------------------------
+karma.conf.js
+	configuration for generate test report in HTML
+----------------------------------------------------------
+package-lock.json
+	log file while install npm package at time of 
+	angular project setup
+	npm i
+
+package
+    "@angular/common": "9.1.0",
+    "@angular/compiler": "9.1.0",
+    "@angular/core": "9.1.0",
+    "@angular/forms": "9.1.0",
+    "@angular/platform-browser": "9.1.0",
+    "@angular/platform-browser-dynamic": "9.1.0",
+    "@angular/router": "9.1.0",
+    "rxjs": "6.5.4",
+    "tslib": "1.10.0",
+    "zone.js": "0.10.2"
+
+-------------------------------
+tsconfig.app.json ,tsconfig.json
+	it's configuation file for typescript - for code(src)
+
+tsconfig.spec.json
+	it's configuation file for typescript - for test case
+
+.spec.js /spec.ts
+.spec meanig it's test case file
+
+tslint.json
+	guild line realted configuation	

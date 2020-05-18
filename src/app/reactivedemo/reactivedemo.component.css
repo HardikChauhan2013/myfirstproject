@@ -1,0 +1,8 @@
+/* ng-dirty ng-touched ng-invalid */
+
+input.ng-invalid{
+    border: red 1px solid;
+}
+input.ng-valid{
+    border: green 1px solid;
+}
